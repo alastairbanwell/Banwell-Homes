@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/banwell-shared.css">
 <link rel="icon" type="image/png" href="/banwell-homes-assets/logo-icon-white.png">
+<link rel="preload" as="video" href="/banwell-homes-assets/hero-bg.mp4" type="video/mp4">
 </head>
 <body>
 
@@ -51,7 +52,7 @@
 </div>
 
 <section class="hero">
-  <video class="hero-bg" src="/banwell-homes-assets/hero-bg.mp4" poster="/banwell-homes-assets/hero-bg.jpg" autoplay muted loop playsinline preload="auto"></video>
+  <video class="hero-bg" src="/banwell-homes-assets/hero-bg.mp4" autoplay muted loop playsinline preload="auto" fetchpriority="high"></video>
   <div class="hero-inner">
     <img class="hero-logo" src="/banwell-homes-assets/logo-icon.png" alt="Banwell Homes">
     <div class="hero-location">Banwell Homes</div>
