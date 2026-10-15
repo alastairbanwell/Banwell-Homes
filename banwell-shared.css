@@ -683,3 +683,7 @@ footer{background:var(--ink); color:rgba(255,255,255,0.7); padding:52px 5% 26px;
      file (which would also affect the nav/footer logo on every page). */
   .hero-logo{transform:translateX(-4.5%);}
 }
+
+/* real h1 on the home page, looks identical to the old div */
+h1.hero-location{margin:0}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
