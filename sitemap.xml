@@ -44,4 +44,20 @@
     <loc>https://www.banwellhomes.co.za/terms/</loc>
     <priority>0.2</priority>
   </url>
+  <url>
+    <loc>https://www.banwellhomes.co.za/services/decking/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.banwellhomes.co.za/services/pergolas/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.banwellhomes.co.za/services/staircases/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.banwellhomes.co.za/services/fencing/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>

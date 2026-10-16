@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/banwell-shared.css">
 <link rel="icon" type="image/png" href="/banwell-homes-assets/logo-icon-white.png">
-<link rel="preload" as="video" href="/banwell-homes-assets/hero-bg.mp4" type="video/mp4">
+<link rel="preload" as="image" href="/banwell-homes-assets/hero-poster.webp" fetchpriority="high">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -144,7 +144,7 @@
     <a href="/services/">Services</a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-  <span class="nav-logo-plate"><a href="/"><img class="nav-logo" src="/banwell-homes-assets/logo-icon.png" alt="Banwell Homes"></a><a href="/" class="nav-wordmark">Banwell Homes</a></span>
+  <span class="nav-logo-plate"><a href="/"><img class="nav-logo" src="/banwell-homes-assets/logo-icon-sm.webp" alt="Banwell Homes"></a><a href="/" class="nav-wordmark">Banwell Homes</a></span>
   <div class="nav-links-right">
     <a href="/work/">Work</a>
     <a href="/contact/">Contact</a>
@@ -166,9 +166,10 @@
 </div>
 
 <section class="hero">
-  <video class="hero-bg" src="/banwell-homes-assets/hero-bg.mp4" autoplay muted loop playsinline preload="auto" fetchpriority="high"></video>
+  <video class="hero-bg" id="heroVideo" poster="/banwell-homes-assets/hero-poster.webp" autoplay muted loop playsinline preload="metadata"></video>
+  <script>(function(){var v=document.getElementById("heroVideo");var small=window.matchMedia("(max-width:860px)").matches;v.src=small?"/banwell-homes-assets/hero-bg-720.mp4":"/banwell-homes-assets/hero-bg-1080.mp4";v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){});})();</script>
   <div class="hero-inner">
-    <img class="hero-logo" src="/banwell-homes-assets/logo-icon.png" alt="Banwell Homes">
+    <img class="hero-logo" src="/banwell-homes-assets/logo-icon.webp" alt="Banwell Homes">
     <h1 class="hero-location">Banwell Homes<span class="sr-only"> carpentry, decking, pergolas and fencing in Betty's Bay</span></h1>
     <div class="hero-tagline">Decks · Pergolas · Staircases · Fencing</div>
     <div class="hero-areas">Betty's Bay · Rooi Els · Kleinmond · Pringle Bay</div>
@@ -187,7 +188,7 @@
     </div>
     <div class="specialty-grid">
       <a class="specialty-card reveal" href="/services/#decking">
-        <img src="/banwell-homes-assets/decking-1.jpg" alt="Freshly stained hardwood deck">
+        <img loading="lazy" decoding="async" src="/banwell-homes-assets/decking-1.webp" alt="Freshly stained hardwood deck">
         <span class="specialty-num">01</span>
         <div class="specialty-body">
           <h3>Decking</h3>
@@ -196,7 +197,7 @@
         </div>
       </a>
       <a class="specialty-card reveal" href="/services/#structures">
-        <img src="/banwell-homes-assets/structures-1.jpg" alt="Pergola with built-in seating and striped shade cloth">
+        <img loading="lazy" decoding="async" src="/banwell-homes-assets/structures-1.webp" alt="Pergola with built-in seating and striped shade cloth">
         <span class="specialty-num">02</span>
         <div class="specialty-body">
           <h3>Pergolas &amp; Structures</h3>
@@ -205,7 +206,7 @@
         </div>
       </a>
       <a class="specialty-card reveal" href="/services/#staircases">
-        <img src="/banwell-homes-assets/staircases-1.jpg" alt="Timber staircase leading up to a house balcony">
+        <img loading="lazy" decoding="async" src="/banwell-homes-assets/staircases-1.webp" alt="Timber staircase leading up to a house balcony">
         <span class="specialty-num">03</span>
         <div class="specialty-body">
           <h3>Staircases</h3>
@@ -214,7 +215,7 @@
         </div>
       </a>
       <a class="specialty-card reveal" href="/services/#fencing">
-        <img src="/banwell-homes-assets/fencing-1.jpg" alt="Horizontal slat fence and gate beside a house">
+        <img loading="lazy" decoding="async" src="/banwell-homes-assets/fencing-1.webp" alt="Horizontal slat fence and gate beside a house">
         <span class="specialty-num">04</span>
         <div class="specialty-body">
           <h3>Fencing &amp; Screening</h3>
@@ -226,7 +227,7 @@
   </div>
 </section>
 
-<section class="about-section" id="about">
+<section class="about-section hm-about" id="about">
   <div class="wrap">
     <div class="about-head reveal">
       <span class="eyebrow">The Story</span>
@@ -234,25 +235,16 @@
     </div>
     <div class="about-grid">
       <div class="about-media-wrap reveal">
-        <div class="about-media"><img src="/banwell-homes-assets/neville-action.jpg" alt="Neville Banwell building deck framing on site"></div>
+        <div class="about-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/neville-action.webp" alt="Neville Banwell building deck framing on site"></div>
       </div>
       <div class="about-copy reveal">
         <p>Neville Banwell has been building and restoring timber structures across the Overberg since 2014, hands-on, and based right here in Betty's Bay. From hardwood decks and pergolas to custom staircases and fencing, every project is personally overseen by Neville, from first site visit to final cleanup, with a small trusted crew helping bring it to life.</p>
         <p>That background shows in the work: real knowledge of timber selection, coastal weathering protection, and the structural fasteners that actually hold up against the salt air on this coast, not a generic build.</p>
-        <div class="about-stats">
-          <div class="about-stat">
-            <div class="num">12+</div>
-            <div class="label">Years Building</div>
-          </div>
-          <div class="about-stat">
-            <div class="num">2014</div>
-            <div class="label">Started</div>
-          </div>
-          <div class="about-stat">
-            <div class="num">100%</div>
-            <div class="label">Owner-Led, Every Job</div>
-          </div>
-        </div>
+        <div class="hm-stats">
+        <div class="hm-stat"><span class="num">12+</span><span class="label">Years Building</span></div>
+        <div class="hm-stat"><span class="num">2014</span><span class="label">Started</span></div>
+        <div class="hm-stat"><span class="num">100%</span><span class="label">Owner-Led, Every Job</span></div>
+      </div>
       </div>
     </div>
   </div>
@@ -270,62 +262,62 @@
   </div>
   <div class="work-strip reveal" id="workStrip">
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/decking-4.jpg" alt="Ocean-view deck"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/decking-4.webp" alt="Ocean-view deck"></div>
       <div class="work-tag">Decking</div>
       <div class="work-title">Ocean-view deck</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/structures-3.jpg" alt="Balustrade and bench"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/structures-3.webp" alt="Balustrade and bench"></div>
       <div class="work-tag">Structures</div>
       <div class="work-title">Balustrade &amp; bench</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/fencing-4.jpg" alt="Dropper fence"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/fencing-4.webp" alt="Dropper fence"></div>
       <div class="work-tag">Fencing</div>
       <div class="work-title">Dropper fence</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/staircases-4.jpg" alt="Cable-rail staircase"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/staircases-4.webp" alt="Cable-rail staircase"></div>
       <div class="work-tag">Staircases</div>
       <div class="work-title">Cable-rail staircase</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/decking-9.jpg" alt="Balustrade deck with a mountain view"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/decking-9.webp" alt="Balustrade deck with a mountain view"></div>
       <div class="work-tag">Decking</div>
       <div class="work-title">Balustrade deck, mountain view</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/structures-6.jpg" alt="Pergola with a mountain reflection"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/structures-6.webp" alt="Pergola with a mountain reflection"></div>
       <div class="work-tag">Structures</div>
       <div class="work-title">Pergola with mountain reflection</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/fencing-14.jpg" alt="Dropper fence with an ocean view"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/fencing-14.webp" alt="Dropper fence with an ocean view"></div>
       <div class="work-tag">Fencing</div>
       <div class="work-title">Dropper fence, ocean view</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/staircases-8.jpg" alt="Cable-rail deck and stairs"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/staircases-8.webp" alt="Cable-rail deck and stairs"></div>
       <div class="work-tag">Staircases</div>
       <div class="work-title">Cable-rail deck &amp; stairs</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/decking-17.jpg" alt="Modern deck with screening"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/decking-17.webp" alt="Modern deck with screening"></div>
       <div class="work-tag">Decking</div>
       <div class="work-title">Modern deck &amp; screening</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/fencing-20.jpg" alt="Wooden gate"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/fencing-20.webp" alt="Wooden gate"></div>
       <div class="work-tag">Fencing</div>
       <div class="work-title">Wooden gate</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/decking-22.jpg" alt="Floating deck on angled struts"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/decking-22.webp" alt="Floating deck on angled struts"></div>
       <div class="work-tag">Decking</div>
       <div class="work-title">Floating deck on angled struts</div>
     </div>
     <div class="work-item">
-      <div class="work-media"><img src="/banwell-homes-assets/staircases-10.jpg" alt="Dark-stained cantilevered deck"></div>
+      <div class="work-media"><img loading="lazy" decoding="async" src="/banwell-homes-assets/staircases-10.webp" alt="Dark-stained cantilevered deck"></div>
       <div class="work-tag">Staircases</div>
       <div class="work-title">Dark-stained cantilevered deck</div>
     </div>
@@ -370,8 +362,8 @@
     <div class="ba-grid reveal">
       <div class="ba-pair">
         <div class="ba-compare">
-          <img class="ba-img ba-after" src="/banwell-homes-assets/ba-after-1.jpg" alt="Finished hardwood deck">
-          <img class="ba-img ba-before" src="/banwell-homes-assets/ba-before-1.jpg" alt="Bare site before the deck was built">
+          <img loading="lazy" decoding="async" class="ba-img ba-after" src="/banwell-homes-assets/ba-after-1.webp" alt="Finished hardwood deck">
+          <img loading="lazy" decoding="async" class="ba-img ba-before" src="/banwell-homes-assets/ba-before-1.webp" alt="Bare site before the deck was built">
           <div class="ba-divider"></div>
           <span class="ba-tag before">Before</span>
           <span class="ba-tag after">After</span>
@@ -380,8 +372,8 @@
       </div>
       <div class="ba-pair">
         <div class="ba-compare">
-          <img class="ba-img ba-after" src="/banwell-homes-assets/ba-after-2.jpg" alt="Finished custom deck built around the trees">
-          <img class="ba-img ba-before" src="/banwell-homes-assets/ba-before-2.jpg" alt="Bare ground marked out before the deck was built">
+          <img loading="lazy" decoding="async" class="ba-img ba-after" src="/banwell-homes-assets/ba-after-2.webp" alt="Finished custom deck built around the trees">
+          <img loading="lazy" decoding="async" class="ba-img ba-before" src="/banwell-homes-assets/ba-before-2.webp" alt="Bare ground marked out before the deck was built">
           <div class="ba-divider"></div>
           <span class="ba-tag before">Before</span>
           <span class="ba-tag after">After</span>
@@ -390,8 +382,8 @@
       </div>
       <div class="ba-pair">
         <div class="ba-compare">
-          <img class="ba-img ba-after" src="/banwell-homes-assets/ba-after-3.jpg" alt="Finished deck with cor-ten steel edge">
-          <img class="ba-img ba-before" src="/banwell-homes-assets/ba-before-3.jpg" alt="Bare site before the deck was built">
+          <img loading="lazy" decoding="async" class="ba-img ba-after" src="/banwell-homes-assets/ba-after-3.webp" alt="Finished deck with cor-ten steel edge">
+          <img loading="lazy" decoding="async" class="ba-img ba-before" src="/banwell-homes-assets/ba-before-3.webp" alt="Bare site before the deck was built">
           <div class="ba-divider"></div>
           <span class="ba-tag before">Before</span>
           <span class="ba-tag after">After</span>
@@ -400,8 +392,8 @@
       </div>
       <div class="ba-pair">
         <div class="ba-compare">
-          <img class="ba-img ba-after" src="/banwell-homes-assets/ba-after-4.jpg" alt="Finished pergola with built-in seating">
-          <img class="ba-img ba-before" src="/banwell-homes-assets/ba-before-4.jpg" alt="Bare site before the pergola was built">
+          <img loading="lazy" decoding="async" class="ba-img ba-after" src="/banwell-homes-assets/ba-after-4.webp" alt="Finished pergola with built-in seating">
+          <img loading="lazy" decoding="async" class="ba-img ba-before" src="/banwell-homes-assets/ba-before-4.webp" alt="Bare site before the pergola was built">
           <div class="ba-divider"></div>
           <span class="ba-tag before">Before</span>
           <span class="ba-tag after">After</span>
@@ -412,60 +404,32 @@
   </div>
 </section>
 
-<section class="process-section">
+<section class="hm-how">
   <div class="wrap">
-    <div class="process-head reveal">
-      <span class="eyebrow">How We Work</span>
+    <div class="hm-how-head reveal">
+      <span class="eyebrow">How we work</span>
       <h2>Measured right.<br><em>Built once.</em></h2>
     </div>
-    <div class="process-grid reveal">
-      <div class="process-step">
-        <span class="step-num">01</span>
-        <h3>The Site Visit</h3>
-        <p>A real look at the site, honest measurements, and a conversation about what actually makes sense for your space and budget.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">02</span>
-        <h3>The Quote</h3>
-        <p>Accurate material estimation and a straightforward quote, no guesswork once work begins.</p>
-      </div>
-      <div class="process-step">
-        <span class="step-num">03</span>
-        <h3>The Build</h3>
-        <p>Built under Neville's direct supervision, start to finish, with a full site cleanup once the work is done.</p>
-      </div>
-    </div>
+    <ol class="hm-how-grid">
+      <li class="hm-how-card reveal" style="--i:0"><span class="im"><img loading="lazy" decoding="async" src="/banwell-homes-assets/neville-action.webp" alt="Neville Banwell on site"></span><span class="tx"><b class="n">01</b><h3>The site visit</h3><p>A real look at the site, honest measurements, and a conversation about what actually makes sense for your space and budget.</p></span></li>
+      <li class="hm-how-card reveal" style="--i:1"><span class="im"><img loading="lazy" decoding="async" src="/banwell-homes-assets/decking-17.webp" alt="Timber deck with screening, ready for measuring"></span><span class="tx"><b class="n">02</b><h3>The quote</h3><p>Accurate material estimation and a straightforward quote, no guesswork once work begins.</p></span></li>
+      <li class="hm-how-card reveal" style="--i:2"><span class="im"><img loading="lazy" decoding="async" src="/banwell-homes-assets/structures-9.webp" alt="Pergola build under way"></span><span class="tx"><b class="n">03</b><h3>The build</h3><p>Built under Neville's direct supervision, start to finish, with a full site cleanup once the work is done.</p></span></li>
+    </ol>
   </div>
 </section>
 
-<section class="why-section">
-  <div class="wrap">
-    <div class="why-head reveal">
-      <span class="eyebrow">What We Promise</span>
-      <h2>Hired for the craft.<em>Remembered for the reliability.</em></h2>
-    </div>
-    <div class="why-grid reveal">
-      <div class="why-card">
-        <span class="num">01</span>
-        <h3>12+ Years Experience</h3>
-        <p>Independent carpenter and fencing specialist across the Overberg since 2014.</p>
-      </div>
-      <div class="why-card">
-        <span class="num">02</span>
-        <h3>Owner-Led, Every Project</h3>
-        <p>No outsourced subcontractors, Neville personally quotes every job and oversees the build with his own small crew.</p>
-      </div>
-      <div class="why-card">
-        <span class="num">03</span>
-        <h3>Built For This Coast</h3>
-        <p>Real knowledge of coastal weathering and the right timber for Betty's Bay conditions.</p>
-      </div>
-      <div class="why-card">
-        <span class="num">04</span>
-        <h3>Local &amp; Reliable</h3>
-        <p>Betty's Bay based, with a strong record of repeat business and local referrals.</p>
-      </div>
-    </div>
+<section class="hm-why">
+  <div class="wrap sv-points-grid">
+    <div class="sv-points-cell"><div class="sv-points-head">
+      <span class="eyebrow">What we promise</span>
+      <h2>Hired for the craft. <em>Remembered for the reliability.</em></h2>
+    </div></div>
+    <ol class="sv-list">
+      <li class="reveal" style="--i:0"><span class="n">01</span><div><h3>12+ Years Experience</h3><p>Independent carpenter and fencing specialist across the Overberg since 2014.</p></div></li>
+      <li class="reveal" style="--i:1"><span class="n">02</span><div><h3>Owner-Led, Every Project</h3><p>No outsourced subcontractors, Neville personally quotes every job and oversees the build with his own small crew.</p></div></li>
+      <li class="reveal" style="--i:2"><span class="n">03</span><div><h3>Built For This Coast</h3><p>Real knowledge of coastal weathering and the right timber for Betty's Bay conditions.</p></div></li>
+      <li class="reveal" style="--i:3"><span class="n">04</span><div><h3>Local &amp; Reliable</h3><p>Betty's Bay based, with a strong record of repeat business and local referrals.</p></div></li>
+    </ol>
   </div>
 </section>
 
@@ -535,7 +499,7 @@
 <footer>
   <div class="wrap">
     <div class="footer-row">
-      <div class="footer-brand"><img class="footer-logo" src="/banwell-homes-assets/logo-icon.png" alt="Banwell Homes"><span class="footer-name">Banwell Homes</span></div>
+      <div class="footer-brand"><img loading="lazy" decoding="async" class="footer-logo" src="/banwell-homes-assets/logo-icon-sm.webp" alt="Banwell Homes"><span class="footer-name">Banwell Homes</span></div>
       <div class="footer-links">
         <a href="/" class="active">Home</a>
     <a href="/about/">About</a>
@@ -547,7 +511,7 @@
     <div class="footer-bottom">
       <a href="tel:+27729609852">072 960 9852</a>
       <a href="mailto:nevbanwell@gmail.com">nevbanwell@gmail.com</a>
-      <span>© 2026 Banwell Homes. Betty's Bay, Western Cape.</span><a href="https://www.alastairbanwell.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4); font-size:12px; margin-left:6px;">Site by Alastair Banwell</a>
+      <span>© 2026 Banwell Homes. Betty's Bay, Western Cape.</span><a href="https://www.alastairbanwell.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.4); font-size:12px; margin-left:6px;">Site by Alastair Banwell</a>
       <div class="footer-legal"><a href="/blog/">Blog</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
     </div>
   </div>
