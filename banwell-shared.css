@@ -1,3 +1,5 @@
+@font-face{font-family:'Archivo'; font-style:normal; font-weight:500 800; font-display:swap; src:url(/banwell-homes-assets/fonts/archivo-latin.woff2) format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Source Sans 3'; font-style:normal; font-weight:400 700; font-display:swap; src:url(/banwell-homes-assets/fonts/source-sans-3-latin.woff2) format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 :root{
   --timber:#C08A3E;
   --timber-deep:#96692B;
@@ -1336,3 +1338,9 @@ body.nav-solid{padding-top:74px;}
   .hm-how-card .n{font-size:52px;}
 }
 @media(prefers-reduced-motion:reduce){ .hm-how-card img{transition:none;} }
+
+/* ===== Speed: skip layout and paint work for sections far below the screen ===== */
+.specialty-section, .about-section, .work-section, .trust-section, .ba-section, .hm-how, .hm-why, .faq-section, .final-cta,
+.sv-points, .sv-work, .sv-who, .sv-more, .sh-rows, .ab-story, .ab-why, .ab-photos, .bp-photos, .bp-more{
+  content-visibility:auto; contain-intrinsic-size:auto 900px;
+}

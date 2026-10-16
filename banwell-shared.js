@@ -351,3 +351,21 @@ function faqToggle(btn){
   setup();
   if(mq.addEventListener) mq.addEventListener('change', setup); else if(mq.addListener) mq.addListener(setup);
 })();
+
+// Lazy videos: load and play only when near the screen, pause when away
+(function(){
+  var vids = [].slice.call(document.querySelectorAll('video[data-src]'));
+  if(!vids.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!('IntersectionObserver' in window) || reduce) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var v = en.target;
+      if(en.isIntersecting){
+        if(!v.getAttribute('src')){ v.setAttribute('src', v.getAttribute('data-src')); }
+        var p = v.play(); if(p && p.catch) p.catch(function(){});
+      } else if(v.getAttribute('src')){ v.pause(); }
+    });
+  }, { rootMargin: '200px 0px' });
+  vids.forEach(function(v){ io.observe(v); });
+})();
