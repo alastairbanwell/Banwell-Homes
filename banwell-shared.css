@@ -1344,3 +1344,32 @@ body.nav-solid{padding-top:74px;}
 .sv-points, .sv-work, .sv-who, .sv-more, .sh-rows, .ab-story, .ab-why, .ab-photos, .bp-photos, .bp-more{
   content-visibility:auto; contain-intrinsic-size:auto 900px;
 }
+
+/* ===== Customer reviews (real Google reviews, quoted exactly) ===== */
+:root{ --google-yellow:#FBBC04; --google-blue:#4285F4; --google-green:#34A853; }
+.rv-section{background:var(--sand-warm); padding:110px 0; content-visibility:auto; contain-intrinsic-size:auto 640px;}
+.rv-badge{display:inline-flex; align-items:center; gap:10px; background:var(--white); border-radius:999px; padding:8px 18px 8px 10px; box-shadow:var(--shadow-card); font-weight:700; font-size:15px; color:var(--ink);}
+.rv-h{font-family:var(--font-display); text-transform:uppercase; font-weight:800; font-size:clamp(28px, 3.6vw, 46px); line-height:1.06; margin-top:22px;}
+.rv-h em{font-style:italic; font-weight:600; color:var(--brass);}
+.rv-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px; margin-top:44px;}
+.rv-grid.rv-single{grid-template-columns:minmax(0,1fr); max-width:760px;}
+.rv-card{background:var(--white); border-radius:6px; padding:30px; box-shadow:var(--shadow-card); display:flex; flex-direction:column; border-top:4px solid var(--google-yellow);}
+.rv-top{display:flex; align-items:center; justify-content:space-between;}
+.rv-stars{color:var(--google-yellow); font-size:22px; letter-spacing:0.14em; line-height:1;}
+.rv-card blockquote{margin-top:20px; font-size:20px; line-height:1.6; color:var(--ink);}
+.rv-card blockquote.rv-clamp:not(.rv-open){display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:4; line-clamp:4; overflow:hidden;}
+.rv-more{align-self:flex-start; margin-top:10px; padding:6px 0; background:none; border:0; font:inherit; font-size:15px; font-weight:700; color:var(--ink); border-bottom:1.5px solid var(--timber); cursor:pointer; transition:color 160ms var(--ease);}
+.rv-more:hover{color:var(--brass);}
+.rv-more:active{transform:scale(0.97);}
+.rv-more:focus-visible{outline:2px solid var(--brass); outline-offset:3px;}
+.rv-who{display:flex; align-items:center; gap:14px; margin-top:auto; padding-top:26px;}
+.rv-av{width:42px; height:42px; border-radius:50%; display:grid; place-items:center; color:var(--white); font-weight:700; font-size:18px; flex:none;}
+.rv-who b{display:block; font-size:16px; color:var(--ink);}
+.rv-who div span{display:flex; align-items:center; gap:6px; font-size:13px; color:var(--ink-faint);}
+.rv .g, .rv-section .g{flex:none;}
+@media(max-width:760px){
+  .rv-section{padding:72px 0;}
+  .rv-grid{grid-template-columns:minmax(0,1fr);}
+  .rv-card{padding:24px;}
+  .rv-card blockquote{font-size:18px;}
+}

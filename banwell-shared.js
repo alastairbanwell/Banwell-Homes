@@ -369,3 +369,34 @@ function faqToggle(btn){
   }, { rootMargin: '200px 0px' });
   vids.forEach(function(v){ io.observe(v); });
 })();
+
+// Reviews: long quotes show four lines with a Read full review toggle. Short ones get no button.
+(function(){
+  var cards = [].slice.call(document.querySelectorAll('.rv-card'));
+  if(!cards.length) return;
+  function setup(card){
+    var q = card.querySelector('blockquote');
+    if(!q) return;
+    var btn = card.querySelector('.rv-more');
+    var open = q.classList.contains('rv-open');
+    if(!open) q.classList.add('rv-clamp');
+    var overflows = open || q.scrollHeight > q.clientHeight + 1;
+    if(!overflows){ q.classList.remove('rv-clamp'); if(btn) btn.remove(); return; }
+    if(btn) return;
+    btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'rv-more';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Read full review';
+    btn.addEventListener('click', function(){
+      var nowOpen = q.classList.toggle('rv-open');
+      btn.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
+      btn.textContent = nowOpen ? 'Show less' : 'Read full review';
+    });
+    q.insertAdjacentElement('afterend', btn);
+  }
+  function run(){ cards.forEach(setup); }
+  run();
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(run, 150); });
+})();
