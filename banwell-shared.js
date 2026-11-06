@@ -400,3 +400,7 @@ function faqToggle(btn){
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(run);
   var t; window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(run, 150); });
 })();
+
+/* Google reviews carousel dots, mobile only */
+(function(){var g=document.querySelector('.rv-grid');if(!g||!window.matchMedia('(max-width:760px)').matches)return;var cs=g.querySelectorAll('.rv-card');if(cs.length<2)return;var d=document.createElement('div');d.className='rv-dots';for(var i=0;i<cs.length;i++)d.appendChild(document.createElement('span'));g.parentNode.insertBefore(d,g.nextSibling);function set(){var step=cs[0].offsetWidth+14,i=Math.max(0,Math.min(cs.length-1,Math.round(g.scrollLeft/step)));Array.prototype.forEach.call(d.children,function(s,k){s.classList.toggle('on',k===i)})}g.addEventListener('scroll',set,{passive:true});set();})();
+

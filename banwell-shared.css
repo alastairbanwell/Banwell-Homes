@@ -1374,3 +1374,20 @@ body.nav-solid{padding-top:74px;}
   .rv-card{padding:24px;}
   .rv-card blockquote{font-size:18px;}
 }
+
+/* Google reviews: mobile carousel, centred header, action buttons (6 Nov 2026) */
+@media(max-width:760px){
+  .rv-section .wrap > .rv-badge{display:flex;width:max-content;margin:0 auto}
+  .rv-h{text-align:center;text-wrap:balance;margin-top:20px}
+  .rv-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:32px 0 0;padding:0 0 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .rv-grid::-webkit-scrollbar{display:none}
+  .rv-grid .rv-card{flex:0 0 88%;scroll-snap-align:center;opacity:1;transform:none}
+  .rv-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+  .rv-dots span{width:8px;height:8px;border-radius:50%;background:rgba(0,0,0,.2);transition:background 160ms ease,transform 160ms ease}
+  .rv-dots span.on{background:var(--brass);transform:scale(1.25)}
+  .rv-section .sv-link{display:table;margin:22px auto 0}
+}
+@media(prefers-reduced-motion:reduce){.rv-dots span{transition:none}}
+
+.rv-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:40px}.rv-actions .btn{margin-top:0;width:auto}
+@media(max-width:760px){.rv-actions{flex-direction:column;align-items:stretch;margin-top:22px}.rv-actions .btn{width:100%;justify-content:center}}
